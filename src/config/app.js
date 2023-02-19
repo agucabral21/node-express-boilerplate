@@ -1,11 +1,9 @@
 const express = require("express");
 const dotenv = require("dotenv");
-const { urlNotFound } = require("../middlewares");
+const APIv1 = require("../routes");
+const { morgan, errorHandler, urlNotFound } = require("../middlewares");
 
 dotenv.config();
-
-const APIv1 = require("../routes");
-const { morgan, errorHandler } = require("../middlewares");
 
 const app = express();
 
